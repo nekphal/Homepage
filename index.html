@@ -159,6 +159,7 @@
         color: white;
         margin-top: 0;
         font-size: 15px;
+        text-align: center;
     }
 
     .link {
@@ -238,20 +239,10 @@
 <script>
     function showTime() {
         const today = new Date();
-        let h = today.getHours();
-        let m = today.getMinutes();
-        let s = today.getSeconds();
-        h = checkTime(h);
-        m = checkTime(m);
-        s = checkTime(s);
-        document.getElementById('time').innerHTML = h + ":" + m + ":" + s;
+        document.getElementById('time').innerHTML = today.toLocaleTimeString() + "<br>" + today.toLocaleDateString();
         setTimeout(showTime, 500);
     }
 
-    function checkTime(i) {
-        if (i < 10) { i = "0" + i };
-        return i;
-    }
     showTime();
 
 
