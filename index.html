@@ -47,9 +47,9 @@
     <div class="link" onclick="location.href='https://vw.westphal24.de'">
         <div class="icon">
             <svg xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 512 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                viewBox="0 0 448 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
                 <path
-                    d="M336 352c97.2 0 176-78.8 176-176S433.2 0 336 0S160 78.8 160 176c0 18.7 2.9 36.8 8.3 53.7L7 391c-4.5 4.5-7 10.6-7 17v80c0 13.3 10.7 24 24 24h80c13.3 0 24-10.7 24-24V448h40c13.3 0 24-10.7 24-24V384h40c6.4 0 12.5-2.5 17-7l33.3-33.3c16.9 5.4 35 8.3 53.7 8.3zM376 96a40 40 0 1 1 0 80 40 40 0 1 1 0-80z" />
+                    d="M144 144v48H304V144c0-44.2-35.8-80-80-80s-80 35.8-80 80zM80 192V144C80 64.5 144.5 0 224 0s144 64.5 144 144v48h16c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V256c0-35.3 28.7-64 64-64H80z" />
             </svg>
         </div>
         <div class="text">
@@ -181,20 +181,26 @@
     .link:active {
         background-color: #0aaa7f;
         box-shadow: 6px 6px rgba(63, 63, 63, 0.568);
-        color: white;
         transition: all ease-in-out .25s;
     }
 
     .link:hover .icon,
     .link:active .icon {
         filter: invert(100%);
-        width: 37px;
+        width: 36px;
         transition: all ease-in-out .25s;
     }
 
+    .link:hover .text,
+    .link:active .text {
+        color: white;
+        transition: all ease-in-out .25s;
+        font-size: 20.4px;
+    }
+
     .icon {
-        height: 35px;
-        width: 35px;
+        height: 34px;
+        width: 34px;
         justify-content: center;
         align-items: center;
         display: flex;
@@ -210,6 +216,7 @@
         text-align: left;
         font-size: 20px;
         color: black;
+        transition: all ease-in-out .25s;
     }
 
     #impressum {
