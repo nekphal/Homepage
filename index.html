@@ -108,6 +108,7 @@
         </div>
     </div>
 </div>
+
 <div id="impressum">
     <p class="bold">Bei dieser Webseite, sowie verlinkten Webseiten, handelt es sich um private Webseiten.</p>
     <p>Eine Angabe des Impressum nach §5 TMG ist damit nicht nötig.</p>
@@ -153,6 +154,15 @@
         color: white;
         font-size: 40px;
         margin-bottom: 0;
+        background-image: linear-gradient(#ffffff 0 0);
+        background-position: right -100% bottom 20%;
+        background-size: 200% 2px;
+        background-repeat: no-repeat;
+    }
+
+    .title:hover {
+        background-position: left -100% bottom 20%;
+        transition: background-position 0.75s;
     }
 
     #time {
@@ -174,7 +184,6 @@
         cursor: pointer;
         margin-bottom: 15px;
         transition: all ease-in-out .25s;
-
     }
 
     .link:hover,
