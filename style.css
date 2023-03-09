@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+
+:root.light {
+    --bg1: #42828b;
+    --bg2: #2b9094;
+    --bg3: #019e96;
+    --bg4: #00ac93;
+    --bg5: #05b98a;
+    --primary: white;
+    --secondary: black;
+    --link-border: rgba(255, 255, 255, 0.37);
+    --link-bg: #dbd9fd;
+    --link-bg-hover: #0aaa7f;
+    --link-bs-hover: rgba(63, 63, 63, 0.568);
+    --icon-invert: 0%;
+    --icon-invert-hover: 100%;
+    --theme-icon: 3px 5px 3px rgba(0, 0, 0, 0.4);
+}
+
+:root.dark {
+    --bg1: #4c4c4c;
+    --bg2: #3a3a3a;
+    --bg3: #282828;
+    --bg4: #181818;
+    --bg5: #000000;
+    --primary: rgb(31, 31, 31);
+    --secondary: white;
+    --link-border: rgba(201, 201, 201, 0.815);
+    --link-bg: #ff3852b2;
+    --link-bg-hover: #ff5b70;
+    --link-bs-hover: rgba(255, 255, 255, 0.137);
+    --icon-invert: 85%;
+    --icon-invert-hover: 7%;
+    --theme-icon: 3px 5px 3px rgba(255, 255, 255, 0.25);
+}
+
+html {
+    background-image: radial-gradient(circle, var(--bg1), var(--bg2), var(--bg3), var(--bg4), var(--bg5));
+    font-family: 'Nunito', sans-serif;
+}
+
+#main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.title {
+    color: white;
+    font-size: 40px;
+    margin-bottom: 0;
+    background-image: linear-gradient(white 0 0);
+    background-position: right -100% bottom 20%;
+    background-size: 200% 2px;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.title:hover {
+    background-position: left -100% bottom 20%;
+    transition: background-position 0.75s;
+}
+
+#time {
+    color: white;
+    margin-top: 0;
+    font-size: 15px;
+    text-align: center;
+}
+
+.link {
+    display: flex;
+    flex-direction: row;
+    border: 3px solid var(--link-border);
+    border-radius: 10px;
+    align-items: center;
+    width: 200px;
+    height: 35px;
+    background-color: var(--link-bg);
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: all ease-in-out .25s;
+    text-decoration: none;
+}
+
+.link:hover,
+.link:active {
+    background-color: var(--link-bg-hover);
+    box-shadow: 6px 6px var(--link-bs-hover);
+    transition: all ease-in-out .25s;
+}
+
+.link:hover .icon,
+.link:active .icon {
+    filter: invert(var(--icon-invert-hover));
+    width: 36px;
+    transition: all ease-in-out .25s;
+}
+
+.link:hover .text,
+.link:active .text {
+    color: var(--primary);
+    transition: all ease-in-out .25s;
+    font-size: 20.4px;
+}
+
+.icon {
+    height: 34px;
+    width: 34px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding-left: 5px;
+    color: var(--primary);
+    margin: 1px;
+    margin-right: 10px;
+    transition: all ease-in-out .25s;
+    filter: invert(var(--icon-invert));
+}
+
+.text {
+    width: 100%;
+    text-align: left;
+    font-size: 20px;
+    color: var(--secondary);
+    transition: all ease-in-out .25s;
+}
+
+#impressum {
+    color: white;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    font-size: 20px;
+    text-align: center;
+}
+
+#impressum p {
+    margin: 0;
+}
+
+#impressum .link {
+    margin-top: 50px;
+}
+
+.bold {
+    font-weight: bolder;
+}
+
+.theme-icon {
+    width: 23px;
+    filter: invert(var(--icon-invert)) drop-shadow(var(--theme-icon));
+    cursor: pointer;
+}
