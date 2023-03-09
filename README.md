@@ -9,3 +9,5 @@ Some Github repositories of the services I use:
 - [Uptime Kuma](https://github.com/louislam/uptime-kuma)
 - [Wireguard UI](https://github.com/ngoduykhanh/wireguard-ui)
 - [Nginx Proxy Manager](https://github.com/NginxProxyManager/nginx-proxy-manager)
+<br><br>
+> **_SVG-Icons:_**  [Font Awesome](https://fontawesome.com/)
