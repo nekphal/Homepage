@@ -9,5 +9,33 @@ Some Github repositories of the services I use:
 - [Uptime Kuma](https://github.com/louislam/uptime-kuma)
 - [Wireguard UI](https://github.com/ngoduykhanh/wireguard-ui)
 - [Nginx Proxy Manager](https://github.com/NginxProxyManager/nginx-proxy-manager)
+
+## Usage with docker
+
+### docker cli
+build image
+
+```bash
+docker build -t homepage .
+```
+
+start container
+
+```bash
+docker run -d -p:80:80 homepage
+```
+
+### docker-compose
+
+```yaml
+version: '3.7'
+services:
+  homepage:
+    build: ./ # path to git repository
+    restart: unless-stopped
+    ports:
+      - 80
+```
+
 <br><br>
 > **_SVG-Icons:_**  [Font Awesome](https://fontawesome.com/)
